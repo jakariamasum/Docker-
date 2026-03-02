@@ -1,24 +1,24 @@
 {
-  "name": "docker",
+  "name": "docker-with-typescipt-backend",
   "version": "1.0.0",
-  "description": "\"# Docker-\"",
   "main": "index.js",
   "scripts": {
-  "dev": "ts-node-dev src/index.ts",
-  "build": "tsc",
-  "start": "node dist/index.js"
-},
-  "type": "module",
+    "start": "node ./dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "prod": "NODE_ENV=production node ./dist/server.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^4.21.0"
   },
   "devDependencies": {
-    "@types/express": "^5.0.6",
-    "@types/node": "^25.3.3",
+    "@types/express": "^5.0.0",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.6.2"
   }
 }
